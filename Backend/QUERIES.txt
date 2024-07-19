@@ -1,0 +1,14 @@
+const categories = ["groceries" , "fragrances"];
+const brands = ['Samsung', 'Redmi'];
+
+Product.find( 
+    { 
+        category : [ $in : categories ] , 
+        brand : [ $in : brands] 
+    }
+).sort(sortingCriteriaObject)
+
+sortingCriteriaObject = {
+    price : -1 , 
+    rating : 1 
+}
